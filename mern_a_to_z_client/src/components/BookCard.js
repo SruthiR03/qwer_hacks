@@ -14,10 +14,10 @@ const BookCard = (props) => {
       />
       <div className='desc'>
         <h2>
-          <Link to={`/show-book/${book._id}`}>{book.title}</Link>
+          <Link to={`/show-book/${book._id}`}>{book.name}</Link>
         </h2>
-        <h3>{book.author}</h3>
-        <p>{book.description}</p>
+        <h3>{book.address}</h3>
+        <p>{book.zipcode}</p>
       </div>
     </div>
   );

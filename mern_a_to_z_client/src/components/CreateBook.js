@@ -8,12 +8,16 @@ const CreateBook = (props) => {
   // Define the state with useState hook
   const navigate = useNavigate();
   const [book, setBook] = useState({
-    title: '',
-    isbn: '',
-    author: '',
-    description: '',
-    published_date: '',
-    publisher: '',
+    name: '',
+    address: '',
+    city: '',
+    state: '',
+    zipcode: '',
+    cleanliness: '',
+    racial_inclusivity: '',
+    helpfulness: '',
+    pronouns: '',
+    professionalism: '',
   });
 
   const onChange = (e) => {
@@ -27,12 +31,16 @@ const CreateBook = (props) => {
       .post('http://localhost:8082/api/books', book)
       .then((res) => {
         setBook({
-          title: '',
-          isbn: '',
-          author: '',
-          description: '',
-          published_date: '',
-          publisher: '',
+          name: '',
+          address: '',
+          city: '',
+          state: '',
+          zipcode: '',
+          cleanliness: '',
+          racial_inclusivity: '',
+          helpfulness: '',
+          pronouns: '',
+          professionalism: '',
         });
 
         // Push to /
@@ -50,21 +58,21 @@ const CreateBook = (props) => {
           <div className='col-md-8 m-auto'>
             <br />
             <Link to='/' className='btn btn-outline-warning float-left'>
-              Show BooK List
+              Show Hospital List
             </Link>
           </div>
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Add Book</h1>
-            <p className='lead text-center'>Create new book</p>
+            <h1 className='display-4 text-center'>Add Hospital</h1>
+            <p className='lead text-center'>Create new hospital</p>
 
             <form noValidate onSubmit={onSubmit}>
               <div className='form-group'>
                 <input
                   type='text'
-                  placeholder='Title of the Book'
-                  name='title'
+                  placeholder='Name of the Hospital'
+                  name='name'
                   className='form-control'
-                  value={book.title}
+                  value={book.name}
                   onChange={onChange}
                 />
               </div>
@@ -73,10 +81,10 @@ const CreateBook = (props) => {
               <div className='form-group'>
                 <input
                   type='text'
-                  placeholder='ISBN'
-                  name='isbn'
+                  placeholder='address'
+                  name='address'
                   className='form-control'
-                  value={book.isbn}
+                  value={book.address}
                   onChange={onChange}
                 />
               </div>
@@ -84,10 +92,10 @@ const CreateBook = (props) => {
               <div className='form-group'>
                 <input
                   type='text'
-                  placeholder='Author'
-                  name='author'
+                  placeholder='City'
+                  name='city'
                   className='form-control'
-                  value={book.author}
+                  value={book.city}
                   onChange={onChange}
                 />
               </div>
@@ -95,31 +103,74 @@ const CreateBook = (props) => {
               <div className='form-group'>
                 <input
                   type='text'
-                  placeholder='Describe this book'
-                  name='description'
+                  placeholder='State'
+                  name='state'
                   className='form-control'
-                  value={book.description}
+                  value={book.state}
                   onChange={onChange}
                 />
               </div>
 
               <div className='form-group'>
                 <input
-                  type='date'
-                  placeholder='published_date'
-                  name='published_date'
+                  type='number'
+                  placeholder='zipcode'
+                  name='zipcode'
                   className='form-control'
-                  value={book.published_date}
+                  value={book.zipcode}
                   onChange={onChange}
                 />
               </div>
               <div className='form-group'>
                 <input
-                  type='text'
-                  placeholder='Publisher of this Book'
-                  name='publisher'
+                  type='number'
+                  placeholder='cleanliness'
+                  name='cleanliness'
                   className='form-control'
-                  value={book.publisher}
+                  value={book.cleanliness}
+                  onChange={onChange}
+                />
+              </div>
+              <div className='form-group'>
+                <input
+                  type='number'
+                  placeholder='racial_inclusivity'
+                  name='racial_inclusivity'
+                  className='form-control'
+                  value={book.racial_inclusivity}
+                  onChange={onChange}
+                />
+              </div>
+
+              <div className='form-group'>
+                <input
+                  type='number'
+                  placeholder='helpfulness'
+                  name='helpfulness'
+                  className='form-control'
+                  value={book.helpfulness}
+                  onChange={onChange}
+                />
+              </div>
+
+              <div className='form-group'>
+                <input
+                  type='number'
+                  placeholder='Gender Inclusivity'
+                  name='pronouns'
+                  className='form-control'
+                  value={book.pronouns}
+                  onChange={onChange}
+                />
+              </div>
+
+              <div className='form-group'>
+                <input
+                  type='number'
+                  placeholder='professionalism'
+                  name='professionalism'
+                  className='form-control'
+                  value={book.professionalism}
                   onChange={onChange}
                 />
               </div>

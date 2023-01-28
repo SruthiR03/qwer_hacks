@@ -5,12 +5,16 @@ import '../App.css';
 
 function UpdateBookInfo(props) {
   const [book, setBook] = useState({
-    title: '',
-    isbn: '',
-    author: '',
-    description: '',
-    published_date: '',
-    publisher: '',
+    name: '',
+    address: '',
+    city: '',
+    state: '',
+    zipcode: '',
+    cleanliness: '',
+    racial_inclusivity: '',
+    helpfulness: '',
+    pronouns: '',
+    professionalism: '',
   });
 
   const { id } = useParams();
@@ -21,12 +25,16 @@ function UpdateBookInfo(props) {
       .get(`http://localhost:8082/api/books/${id}`)
       .then((res) => {
         setBook({
-          title: res.data.title,
-          isbn: res.data.isbn,
-          author: res.data.author,
-          description: res.data.description,
-          published_date: res.data.published_date,
-          publisher: res.data.publisher,
+          name: res.data.name,
+          address: res.data.address,
+          city: res.data.city,
+          state: res.data.state,
+          zipcode: res.data.zipcode,
+          cleanliness: res.data.cleanliness,
+          racial_inclusivity: res.data.racial_inclusivity,
+          helpfulness: res.data.helpfulness,
+          pronouns: res.data.pronouns,
+          professionalism: res.data.professionalism,
         });
       })
       .catch((err) => {
@@ -42,12 +50,17 @@ function UpdateBookInfo(props) {
     e.preventDefault();
 
     const data = {
-      title: book.title,
-      isbn: book.isbn,
-      author: book.author,
-      description: book.description,
-      published_date: book.published_date,
-      publisher: book.publisher,
+      
+      name: book.name,
+      address: book.address,
+      city: book.city,
+      state: book.state,
+      zipcode: book.zipcode,
+      cleanliness: book.cleanliness,
+      racial_inclusivity: book.racial_inclusivity,
+      helpfulness: book.helpfulness,
+      pronouns: book.pronouns,
+      professionalism: book.professionalism,
     };
 
     axios
@@ -67,83 +80,83 @@ function UpdateBookInfo(props) {
           <div className='col-md-8 m-auto'>
             <br />
             <Link to='/' className='btn btn-outline-warning float-left'>
-              Show BooK List
+              Show Hospital List
             </Link>
           </div>
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Edit Book</h1>
-            <p className='lead text-center'>Update Book's Info</p>
+            <h1 className='display-4 text-center'>Edit Hospital</h1>
+            <p className='lead text-center'>Update Hospital's Info</p>
           </div>
         </div>
 
         <div className='col-md-8 m-auto'>
           <form noValidate onSubmit={onSubmit}>
             <div className='form-group'>
-              <label htmlFor='title'>Title</label>
+              <label htmlFor='name'>Name</label>
               <input
-                type='text'
-                placeholder='Title of the Book'
-                name='title'
-                className='form-control'
-                value={book.title}
-                onChange={onChange}
-              />
+                  type='text'
+                  placeholder='Name of the Hospital'
+                  name='name'
+                  className='form-control'
+                  value={book.name}
+                  onChange={onChange}
+                />
             </div>
             <br />
 
             <div className='form-group'>
-              <label htmlFor='isbn'>ISBN</label>
+              <label htmlFor='address'>Address</label>
               <input
-                type='text'
-                placeholder='ISBN'
-                name='isbn'
-                className='form-control'
-                value={book.isbn}
-                onChange={onChange}
-              />
+                  type='text'
+                  placeholder='address'
+                  name='address'
+                  className='form-control'
+                  value={book.address}
+                  onChange={onChange}
+                />
             </div>
             <br />
 
             <div className='form-group'>
-              <label htmlFor='author'>Author</label>
+              <label htmlFor='city'>City</label>
               <input
-                type='text'
-                placeholder='Author'
-                name='author'
-                className='form-control'
-                value={book.author}
-                onChange={onChange}
-              />
+                  type='text'
+                  placeholder='City'
+                  name='city'
+                  className='form-control'
+                  value={book.city}
+                  onChange={onChange}
+                />
             </div>
             <br />
 
             <div className='form-group'>
-              <label htmlFor='description'>Description</label>
+              <label htmlFor='state'>State</label>
               <textarea
-                type='text'
-                placeholder='Description of the Book'
-                name='description'
-                className='form-control'
-                value={book.description}
-                onChange={onChange}
+                 type='text'
+                 placeholder='State'
+                 name='state'
+                 className='form-control'
+                 value={book.state}
+                 onChange={onChange}
               />
             </div>
             <br />
 
             <div className='form-group'>
-              <label htmlFor='published_date'>Published Date</label>
+              <label htmlFor='zipcode'>Zipcode</label>
               <input
-                type='text'
-                placeholder='Published Date'
-                name='published_date'
-                className='form-control'
-                value={book.published_date}
-                onChange={onChange}
+                 type='number'
+                 placeholder='zipcode'
+                 name='zipcode'
+                 className='form-control'
+                 value={book.zipcode}
+                 onChange={onChange}
               />
             </div>
             <br />
 
-            <div className='form-group'>
+            {/* <div className='form-group'>
               <label htmlFor='publisher'>Publisher</label>
               <input
                 type='text'
@@ -154,13 +167,13 @@ function UpdateBookInfo(props) {
                 onChange={onChange}
               />
             </div>
-            <br />
+            <br /> */}
 
             <button
               type='submit'
               className='btn btn-outline-info btn-lg btn-block'
             >
-              Update Book
+              Update Hospital
             </button>
           </form>
         </div>

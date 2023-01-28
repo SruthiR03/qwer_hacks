@@ -1,30 +1,45 @@
 const mongoose = require('mongoose');
 
 const BookSchema = new mongoose.Schema({
-  title: {
+  name: {
     type: String,
-    required: true,
+    required: true
   },
-  isbn: {
+  address: {
     type: String,
-    required: true,
+    required: true
   },
-  author: {
+  city: {
     type: String,
-    required: true,
+    required: true
   },
-  description: {
+  state: {
     type: String,
+    required: true
   },
-  published_date: {
-    type: Date,
+  zipcode: {
+    type: Number,
+    required: true
   },
-  publisher: {
-    type: String,
+  cleanliness: {
+    type: Number,
+    required: true
   },
-  updated_date: {
-    type: Date,
-    default: Date.now,
+  racial_inclusivity: {
+    type: Number,
+    required: true
+  },
+  helpfulness: {
+    type: Number,
+    required: true
+  },
+  pronouns: {
+    type: Number,
+    required: true
+  },
+  professionalism: {
+    type: Number,
+    required: true
   },
 });
 

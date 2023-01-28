@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb://localhost:27017/yourDBName"
+  "mongoURI":
+    "mongodb+srv://rainbowcross:rainbow123@cluster0.ahlipyb.mongodb.net/?retryWrites=true&w=majority"
 }

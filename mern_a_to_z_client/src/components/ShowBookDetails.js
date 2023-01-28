@@ -37,33 +37,33 @@ function ShowBookDetails(props) {
         <tbody>
           <tr>
             <th scope='row'>1</th>
-            <td>Title</td>
-            <td>{book.title}</td>
+            <td>Name</td>
+            <td>{book.name}</td>
           </tr>
           <tr>
             <th scope='row'>2</th>
-            <td>Author</td>
-            <td>{book.author}</td>
+            <td>Address</td>
+            <td>{book.address}</td>
           </tr>
           <tr>
             <th scope='row'>3</th>
-            <td>ISBN</td>
-            <td>{book.isbn}</td>
+            <td>City</td>
+            <td>{book.city}</td>
           </tr>
           <tr>
             <th scope='row'>4</th>
-            <td>Publisher</td>
-            <td>{book.publisher}</td>
+            <td>State</td>
+            <td>{book.state}</td>
           </tr>
           <tr>
             <th scope='row'>5</th>
-            <td>Published Date</td>
-            <td>{book.published_date}</td>
+            <td>Zipcode</td>
+            <td>{book.zipcode}</td>
           </tr>
           <tr>
             <th scope='row'>6</th>
-            <td>Description</td>
-            <td>{book.description}</td>
+            <td>Cleanliness</td>
+            <td>{book.cleanliness}</td>
           </tr>
         </tbody>
       </table>
@@ -77,13 +77,13 @@ function ShowBookDetails(props) {
           <div className='col-md-10 m-auto'>
             <br /> <br />
             <Link to='/' className='btn btn-outline-warning float-left'>
-              Show Book List
+              Show Hospital List
             </Link>
           </div>
           <br />
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Book's Record</h1>
-            <p className='lead text-center'>View Book's Info</p>
+            <h1 className='display-4 text-center'>Hospital's Record</h1>
+            <p className='lead text-center'>View Hospital's Info</p>
             <hr /> <br />
           </div>
           <div className='col-md-10 m-auto'>{BookItem}</div>
@@ -95,7 +95,7 @@ function ShowBookDetails(props) {
                 onDeleteClick(book._id);
               }}
             >
-              Delete Book
+              Delete Hospital
             </button>
           </div>
           <div className='col-md-6 m-auto'>
@@ -103,7 +103,7 @@ function ShowBookDetails(props) {
               to={`/edit-book/${book._id}`}
               className='btn btn-outline-info btn-lg btn-block'
             >
-              Edit Book
+              Edit Hospital
             </Link>
           </div>
         </div>
