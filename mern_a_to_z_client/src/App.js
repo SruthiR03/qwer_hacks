@@ -11,11 +11,14 @@ import DoctorCard from './components/DoctorCard';
 import ShowDoctorList from './components/ShowDoctorList';
 import ShowDoctorDetails from './components/ShowDoctorDetails';
 
+import ShowLandingPage from './components/ShowLandingPage';
+
 const App = () => {
   return (
     <Router>
       <div>
         <Routes>
+          <Route exact path='/' element={<ShowLandingPage />} />
           <Route exact path='/hospital-list' element={<ShowBookList />} />
           <Route path='/create-book' element={<CreateBook />} />
           <Route path='/edit-book/:id' element={<UpdateBookInfo />} />
