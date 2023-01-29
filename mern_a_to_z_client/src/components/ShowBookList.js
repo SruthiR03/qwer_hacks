@@ -34,7 +34,7 @@ function ShowBookList() {
 
           <input
             type="text"
-            placeholder="search by speciality"
+            placeholder="search by specialty"
             className={"searchSpeciality"}
           />
         </div>
