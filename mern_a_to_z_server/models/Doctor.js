@@ -25,6 +25,13 @@ const DoctorSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
+  specialty: {
+    type: String,
+    required: true
+  },
+  reviews: {
+    type: Array,
+  }
 });
 
 module.exports = Doctor = mongoose.model('doctor', DoctorSchema);
