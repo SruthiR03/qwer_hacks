@@ -17,16 +17,20 @@ function ShowLandingPage() {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    var zipcode = document.getElementById("zipcode").value;
-    var distance = document.getElementById("distance").value;
-    var state = document.getElementById("state").value;
+        var zipcode = document.getElementById('zipcode').value;
+        var distance = document.getElementById('distance').value;
+        var state = document.getElementById('state').value;
+        
+        console.log("on submit");
 
-    console.log("on submit");
+        
 
-    console.log(zipcode);
-    console.log(distance);
-    console.log(state);
-  };
+        console.log(zipcode);
+        console.log(distance);
+        console.log(state);
+
+        navigate('/hospital-list');
+      };
 
   return (
     <div>

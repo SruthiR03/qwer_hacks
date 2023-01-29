@@ -20,7 +20,7 @@ ChartJS.register(
 );
 export default function Graph() {
   const data = {
-    labels: ["January", "February", "March", "April", "May"],
+    labels: ["Professionalism", "Racial Inclusiveness", "LGBTQ+ Friendliness", "Cleanliness", "Attentivness"],
     datasets: [
       {
         axis: "y",
@@ -82,9 +82,11 @@ export default function Graph() {
     <div>
       <div>
         <br />
-        <div className="text-center">RATINGS</div>
+        <h3>
+          <strong> Ratings</strong>
+        </h3>
         <div>
-          <Bar data={data} options={options} style={{ width: "500px" }} />
+          <Bar data={data} options={options} style={{ width: "600px"}} />
         </div>
       </div>
     </div>
