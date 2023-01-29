@@ -104,6 +104,7 @@ export default function Form(book, setBook) {
       <br />
       <br />
       <textarea
+      className="input-box-big"
         rows="8"
         cols="40"
         placeholder="Write your review here"
@@ -112,9 +113,9 @@ export default function Form(book, setBook) {
       />
       <br />
       <br />
-      <form className="submit-button">
-        <button onClick={onSubmit}>Submit button</button>
-      </form>
+      <div className="submit-button">
+        <button onClick={onSubmit} className={"submitButton"}>Submit</button>
+          </div>
     </div>
   );
 }

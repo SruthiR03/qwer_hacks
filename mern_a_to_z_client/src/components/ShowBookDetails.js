@@ -5,6 +5,9 @@ import axios from "axios";
 import Graph from "./BarGraph";
 import Radio from "./RadioButtons";
 import Form from "./ReviewForm";
+import logo from "../whiteHeart.png";
+import NavBar from "./NavBar";
+import View from "./ViewReviews";
 function ShowBookDetails(props) {
   const [book, setBook] = useState({
     name: '',
@@ -98,10 +101,12 @@ function ShowBookDetails(props) {
             </Link>
           </div>
           <br />
+          <NavBar />
           <div className="col-md-8 m-auto">
-            <h1 className="display-6 text-center">Rate {book.name}</h1>
+            <h1> <strong> Rate {book.name}</strong> </h1> 
+           
             {/* <p className="lead text-center">View Hospital's Info</p> */}
-            <hr />
+           
             {/* <br /> */}
             <div className="split-screen">
               <div>
@@ -111,9 +116,21 @@ function ShowBookDetails(props) {
             </div>
           </div>
           <div>
-            <h1 className="display-6 text-center">Write A Review</h1>
+            {/* <h1 className="display-6 text-center">Write A Review</h1> */}
             <hr />
+
+            <h1> <strong> Write A Review</strong></h1>
             <Form book={book} setBook={setBook} />
+            
+            
+            {/* <Form />
+            <div className="submit-button">
+        <button className={"submitButton"}>
+          
+          Submit</button> */}
+      </div>
+      <br></br>
+      <View/>
           </div>
 
           {/* <div className="col-md-10 m-auto">{BookItem}</div> */}
@@ -121,7 +138,7 @@ function ShowBookDetails(props) {
           <br />
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
 
