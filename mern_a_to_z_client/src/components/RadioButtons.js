@@ -58,7 +58,7 @@ export default function Radio(book, setBook) {
         </h3>
 
         <fieldset>
-          <h2>Professionalism:</h2>
+          <h2>Gender Affirming Care:</h2>
           <div className="radios">
             <label>
               &nbsp; 1 &nbsp;
@@ -115,7 +115,7 @@ export default function Radio(book, setBook) {
         </fieldset>
         <fieldset>
           <br />
-          <h2>Racial Inclusiveness:</h2>
+          <h2>Gender Inclusive Accomodations:</h2>
           <div className="radios">
             <label>
               &nbsp; 1 &nbsp;
@@ -172,7 +172,7 @@ export default function Radio(book, setBook) {
         </fieldset>
         <fieldset>
           <br />
-          <h2>LGBTQ+ Friendliness</h2>
+          <h2>Allyship:</h2>
           <div className="radios">
             <label>
               &nbsp; 1 &nbsp;
@@ -229,7 +229,7 @@ export default function Radio(book, setBook) {
         </fieldset>
         <fieldset>
           <br />
-          <h2>Cleanliness:</h2>
+          <h2>Accessibility:</h2>
           <div className="radios">
             <label>
               &nbsp; 1 &nbsp;
@@ -286,7 +286,7 @@ export default function Radio(book, setBook) {
         </fieldset>
         <fieldset>
           <br />
-          <h2>Attentiveness:</h2>
+          <h2>Professionalism and Attentiveness:</h2>
           <div className="radios">
             <label>
               1 &nbsp;
