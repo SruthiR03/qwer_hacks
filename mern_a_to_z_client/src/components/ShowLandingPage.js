@@ -27,7 +27,7 @@ function ShowLandingPage() {
         console.log(distance);
         console.log(state);
 
-        
+        navigate('/hospital-list');
       };
 
   return (
