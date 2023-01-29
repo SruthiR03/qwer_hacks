@@ -44,7 +44,7 @@ const CreateBook = (props) => {
         });
 
         // Push to /
-        navigate('/');
+        navigate('/hospital-list');
       })
       .catch((err) => {
         console.log('Error in CreateBook!');
