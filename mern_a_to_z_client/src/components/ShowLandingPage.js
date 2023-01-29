@@ -1,18 +1,32 @@
-// import React, { useState, useEffect } from 'react';
-// import { Link, useParams, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import '../App.css';
-// import axios from 'axios';
+import axios from 'axios';
 
 
 function ShowLandingPage() {
 
+    const navigate = useNavigate();
+    const [zipCode, setZipcode] = useState({
+        zipCode: '',
+      });
+
+
     const onSubmit = (e) => {
         e.preventDefault();
+
+        var zipcode = document.getElementById('zipcode').value;
+        var distance = document.getElementById('distance').value;
+        var state = document.getElementById('state').value;
         
         console.log("on submit");
-        var zipcode = document.getElementById('zipcode').value;
+
+        
 
         console.log(zipcode);
+        console.log(distance);
+        console.log(state);
+
         
       };
 
@@ -24,9 +38,35 @@ function ShowLandingPage() {
     <form noValidate onSubmit={onSubmit}>
               <div className='form-group'>
                 <input
-                  type='text'
+                  type='number'
                   placeholder='Zipcode'
                   id='zipcode'
+                  className='form-control'
+                   // value={book.name}
+                  //onChange={onChange}
+                />
+              </div>
+
+              <br />
+
+              <div className='form-group'>
+                <input
+                  type='text'
+                  placeholder='state'
+                  id='state'
+                  className='form-control'
+                   // value={book.name}
+                  //onChange={onChange}
+                />
+              </div>
+
+              <br />
+
+              <div className='form-group'>
+                <input
+                  type='number'
+                  placeholder='Distance (in miles)'
+                  id='distance'
                   className='form-control'
                    // value={book.name}
                   //onChange={onChange}
