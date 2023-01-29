@@ -27,30 +27,29 @@ function ShowBookList() {
     <div className='ShowBookList'>
       
       <div className='container'>
-      <div className= 'nav-bar'>
-        
-      </div>
+      <div className= 'nav-bar'></div>
+      
+
+      <input
+                    type="textbox"
+                    className={'searchSpeciality'}
+                   
+              
+                  />
+      
+      
         <div className='row'>
         
 
-          <div className='HospitalHeader'>
-          
-            
-            <h2 className='display-4'>Hospitals List</h2>
-          </div>
+         
 
           <div className='col-md-11'>
-            <Link
-              to='/create-book'
-              className='btn btn-outline-warning float-right'
-            >
-              + Add New Hospital
-            </Link>
+         
             <br />
             <br />
-            <hr />
           </div>
         </div>
+
 
         <div className='list'>{bookList}</div>
         
