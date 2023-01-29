@@ -95,7 +95,7 @@ function ShowBookDetails(props) {
               <div>
                 <Radio />
               </div>
-              <Graph />
+              <Graph m1={book.cleanliness} m2={book.racial_inclusivity} m3={book.helpfulness} m4={book.pronouns}  m5={book.professionalism}/>
             </div>
           </div>
           <div>

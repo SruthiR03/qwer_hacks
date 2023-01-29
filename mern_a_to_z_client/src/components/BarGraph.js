@@ -18,9 +18,10 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-export default function Graph() {
+export default function Graph(m1, m2, m3, m4, m5) {
+  console.log(m1);
   const data = {
-    labels: ["January", "February", "March", "April", "May"],
+    labels: ["Gender Affirming Care", "Gender Inclusive Accomodations", "Allyship", "Accessibility", "Professionalism and Attentiveness"],
     datasets: [
       {
         axis: "y",
@@ -43,7 +44,7 @@ export default function Graph() {
           "rgb(201, 203, 207)",
         ],
         borderWidth: 2,
-        data: [1, 1, 3.2, 3.88, 4],
+        data: [m1.m1, m1.m2, m1.m3, m1.m4, m1.m5],
       },
     ],
   };
