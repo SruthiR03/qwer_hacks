@@ -7,6 +7,7 @@ import Radio from "./RadioButtons";
 import Form from "./ReviewForm";
 import logo from "../whiteHeart.png";
 import NavBar from "./NavBar";
+import View from "./ViewReviews";
 function ShowBookDetails(props) {
   const [book, setBook] = useState({});
 
@@ -111,6 +112,8 @@ function ShowBookDetails(props) {
           
           Submit</button>
       </div>
+      <br></br>
+      <View/>
           </div>
 
           {/* <div className="col-md-10 m-auto">{BookItem}</div> */}

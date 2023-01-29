@@ -16,7 +16,7 @@ export default function NavBar() {
           }}
         />
       </a>
-      <div style={{ width: "575px" }}></div>
+      <div style={{ width: "525px" }}></div>
       <div
         className="text-center"
         style={{ justifySelf: "flex-end", alignSelf: "center" }}
