@@ -25,11 +25,18 @@ function ShowBookList() {
 
   return (
     <div className='ShowBookList'>
+      
       <div className='container'>
+      <div className= 'nav-bar'>
+        
+      </div>
         <div className='row'>
-          <div className='col-md-12'>
-            <br />
-            <h2 className='display-4 text-center'>Hospitals List</h2>
+        
+
+          <div className='HospitalHeader'>
+          
+            
+            <h2 className='display-4'>Hospitals List</h2>
           </div>
 
           <div className='col-md-11'>
@@ -46,6 +53,7 @@ function ShowBookList() {
         </div>
 
         <div className='list'>{bookList}</div>
+        
       </div>
     </div>
   );
