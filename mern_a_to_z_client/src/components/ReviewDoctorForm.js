@@ -99,6 +99,8 @@ export default function DoctorForm(book, setBook) {
       />
       <br />
       <br />
+      <br />
+      <br />
       <div className="submit-button">
         <button onClick={onSubmit} className={"submitButton"}>
           Submit

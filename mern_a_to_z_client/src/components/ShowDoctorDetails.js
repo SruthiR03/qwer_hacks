@@ -85,6 +85,9 @@ function ShowDoctorDetails(props) {
           </div>
             <NavBar />
           <br />
+          <br /> <br />
+          <br />
+          
         
           <div className="col-md-8 m-auto">
             <h1>
@@ -121,7 +124,7 @@ function ShowDoctorDetails(props) {
           </div> */}
           <div>
             {/* <h1 className="display-6 text-center">Write A Review</h1> */}
-            <hr />
+           <br></br>
 
             <h1>
               {" "}
@@ -136,11 +139,15 @@ function ShowDoctorDetails(props) {
           Submit</button> */}
           </div>
           <br></br>
-          <h1>
-            <strong>View Other Reviews</strong>
-          </h1>
+          
           {/* <View book={doctor} setBook={setDoctor} /> */}
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <h1>
+            <strong>View Other Reviews</strong>
+          </h1>
 
         {/* <div className="col-md-10 m-auto">{BookItem}</div> */}
 
