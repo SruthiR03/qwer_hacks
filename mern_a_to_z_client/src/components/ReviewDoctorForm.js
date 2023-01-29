@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 
-export default function Form(book, setBook) {
+export default function DoctorForm(book, setBook) {
   const navigate = useNavigate();
 
   const onSubmit = (e) => {
@@ -30,16 +30,11 @@ export default function Form(book, setBook) {
 
     const data = {
       name: book.book.name,
-      address: book.book.address,
-      city: book.book.city,
-      state: book.book.state,
-      zipcode: book.book.zipcode,
-      cleanliness: book.book.cleanliness,
+      medical_expertise: book.book.medical_expertise,
       racial_inclusivity: book.book.racial_inclusivity,
-      helpfulness: book.book.helpfulness,
+      timeliness: book.book.timeliness,
       pronouns: book.book.pronouns,
-      professionalism: book.book.professionalism,
-      reviews: book.book.reviews,
+      consideration: book.book.consideration,
     };
 
     axios

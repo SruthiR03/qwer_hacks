@@ -8,6 +8,7 @@ import Form from "./ReviewForm";
 import logo from "../whiteHeart.png";
 import NavBar from "./NavBar";
 import View from "./ViewReviews";
+import { set } from "mongoose";
 function ShowBookDetails(props) {
   const [book, setBook] = useState({
     name: '',
@@ -110,9 +111,9 @@ function ShowBookDetails(props) {
             {/* <br /> */}
             <div className="split-screen">
               <div>
-                <Radio />
+                <Radio book={book} setBook={setBook}/>
               </div>
-              <Graph />
+              <Graph m1={book.cleanliness} m2={book.racial_inclusivity} m3={book.helpfulness} m4={book.pronouns}  m5={book.professionalism}/>
             </div>
           </div>
           <div>
@@ -130,7 +131,11 @@ function ShowBookDetails(props) {
           Submit</button> */}
       </div>
       <br></br>
-      <View/>
+
+            <h1>
+               <strong>View Other Reviews</strong> 
+            </h1>
+      <View book={book} setBook={setBook}/>
           </div>
 
           {/* <div className="col-md-10 m-auto">{BookItem}</div> */}
