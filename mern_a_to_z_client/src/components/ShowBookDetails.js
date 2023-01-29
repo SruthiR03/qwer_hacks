@@ -5,6 +5,8 @@ import axios from "axios";
 import Graph from "./BarGraph";
 import Radio from "./RadioButtons";
 import Form from "./ReviewForm";
+import logo from "../whiteHeart.png";
+import NavBar from "./NavBar";
 function ShowBookDetails(props) {
   const [book, setBook] = useState({});
 
@@ -86,6 +88,7 @@ function ShowBookDetails(props) {
             </Link>
           </div>
           <br />
+          <NavBar />
           <div className="col-md-8 m-auto">
             <h1 className="display-6 text-center">Rate {book.name}</h1>
             {/* <p className="lead text-center">View Hospital's Info</p> */}
