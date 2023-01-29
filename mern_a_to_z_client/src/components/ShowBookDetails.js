@@ -10,17 +10,17 @@ import NavBar from "./NavBar";
 import View from "./ViewReviews";
 function ShowBookDetails(props) {
   const [book, setBook] = useState({
-    name: '',
-    address: '',
-    city: '',
-    state: '',
-    zipcode: '',
-    cleanliness: '',
-    racial_inclusivity: '',
-    helpfulness: '',
-    pronouns: '',
-    professionalism: '',
-    reviews:[],
+    name: "",
+    address: "",
+    city: "",
+    state: "",
+    zipcode: "",
+    cleanliness: "",
+    racial_inclusivity: "",
+    helpfulness: "",
+    pronouns: "",
+    professionalism: "",
+    reviews: [],
   });
 
   const { id } = useParams();
@@ -48,44 +48,44 @@ function ShowBookDetails(props) {
       });
   };
 
-  const BookItem = (
-    <div>
-      <table className="table table-hover table-dark">
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Name</td>
-            <td>{book.name}</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Address</td>
-            <td>{book.address}</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>City</td>
-            <td>{book.city}</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>State</td>
-            <td>{book.state}</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Zipcode</td>
-            <td>{book.zipcode}</td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>Cleanliness</td>
-            <td>{book.cleanliness}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
+  // const BookItem = (
+  //   <div>
+  //     <table className="table table-hover table-dark">
+  //       <tbody>
+  //         <tr>
+  //           <th scope="row">1</th>
+  //           <td>Name</td>
+  //           <td>{book.name}</td>
+  //         </tr>
+  //         <tr>
+  //           <th scope="row">2</th>
+  //           <td>Address</td>
+  //           <td>{book.address}</td>
+  //         </tr>
+  //         <tr>
+  //           <th scope="row">3</th>
+  //           <td>City</td>
+  //           <td>{book.city}</td>
+  //         </tr>
+  //         <tr>
+  //           <th scope="row">4</th>
+  //           <td>State</td>
+  //           <td>{book.state}</td>
+  //         </tr>
+  //         <tr>
+  //           <th scope="row">5</th>
+  //           <td>Zipcode</td>
+  //           <td>{book.zipcode}</td>
+  //         </tr>
+  //         <tr>
+  //           <th scope="row">6</th>
+  //           <td>Cleanliness</td>
+  //           <td>{book.cleanliness}</td>
+  //         </tr>
+  //       </tbody>
+  //     </table>
+  //   </div>
+  // );
 
   return (
     <div className="ShowBookDetails">
@@ -103,10 +103,13 @@ function ShowBookDetails(props) {
           <br />
           <NavBar />
           <div className="col-md-8 m-auto">
-            <h1> <strong> Rate {book.name}</strong> </h1> 
-           
+            <h1>
+              {" "}
+              <strong> Rate {book.name}</strong>{" "}
+            </h1>
+
             {/* <p className="lead text-center">View Hospital's Info</p> */}
-           
+
             {/* <br /> */}
             <div className="split-screen">
               <div>
@@ -118,30 +121,31 @@ function ShowBookDetails(props) {
           <div>
             {/* <h1 className="display-6 text-center">Write A Review</h1> */}
             <hr />
-
-            <h1> <strong> Write A Review</strong></h1>
+            <h1>
+              {" "}
+              <strong> Write A Review</strong>
+            </h1>
             <Form book={book} setBook={setBook} />
-            
-            
+
             {/* <Form />
             <div className="submit-button">
         <button className={"submitButton"}>
           
           Submit</button> */}
-      </div>
-      <br></br>
-
-            <h1>
-               <strong>View Other Reviews</strong> 
-            </h1>
-      <View book={book} setBook={setBook}/>
           </div>
+          <br></br>
 
-          {/* <div className="col-md-10 m-auto">{BookItem}</div> */}
-
-          <br />
+          <h1>
+            <strong>View Other Reviews</strong>
+          </h1>
+          <View book={book} setBook={setBook} />
         </div>
+
+        {/* <div className="col-md-10 m-auto">{BookItem}</div> */}
+
+        <br />
       </div>
+    </div>
     // </div>
   );
 }

@@ -1,18 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../App.css";
 
 const DoctorCard = (props) => {
   const doctor = props.doctor;
 
   return (
-    <div className='card-container'>
-      <div className='desc'>
-        <h2>
+    <div className="doctor-card">
+      <div className="desc">
+        <h1>
+          <strong>{doctor.name}</strong>
+        </h1>
+        <h3>
+          <strong>INSERT MY SPECIALTY</strong>
+        </h3>
+        {/* <h2>
           <Link to={`/show-doctor/${doctor._id}`}>{doctor.name}</Link>
-        </h2>
-        <h3>{doctor.address}</h3>
-        <p>{doctor.zipcode}</p>
+        </h2> */}
+        <div className="reviewbutton">
+          <Link to={`/show-doctor/${doctor._id}`}>
+            {" "}
+            <h2><strong>View/Rate Doctor</strong> </h2>
+          </Link>
+        </div>
       </div>
     </div>
   );
