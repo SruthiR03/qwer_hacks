@@ -3,8 +3,8 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import "../App.css";
 import axios from "axios";
 import NavBar from "./NavBar";
-import Radio from "./RadioButtons";
-import Graph from "./BarGraph";
+import DocRadio from "./DoctorRadio";
+import DocGraph from "./DoctorGraph";
 import DoctorForm from "./ReviewDoctorForm";
 import View from "./ViewReviews";
 
@@ -94,9 +94,9 @@ function ShowDoctorDetails(props) {
             <br />
             <div className="split-screen">
               <div>
-                <Radio />
+                <DocRadio />
               </div>
-              <Graph />
+              <DocGraph />
             </div>
           </div>
           {/* <div className="col-md-10 m-auto">{DoctorItem}</div> */}
