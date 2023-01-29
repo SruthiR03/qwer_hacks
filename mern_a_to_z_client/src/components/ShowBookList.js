@@ -28,13 +28,15 @@ function ShowBookList() {
     <div className="ShowBookList">
       <NavBar />
       <div className="container">
-        <div className="search-image"></div>
+        <div className="search-flex">
+          <div className="search-image"></div>
 
-        <input
-          type="text"
-          placeholder="search by speciality"
-          className={"searchSpeciality"}
-        />
+          <input
+            type="text"
+            placeholder="search by speciality"
+            className={"searchSpeciality"}
+          />
+        </div>
 
         <div className="row">
           <div className="col-md-11">
