@@ -18,6 +18,7 @@ const CreateBook = (props) => {
     helpfulness: '',
     pronouns: '',
     professionalism: '',
+    reviews:[],
   });
 
   const onChange = (e) => {
@@ -41,6 +42,7 @@ const CreateBook = (props) => {
           helpfulness: '',
           pronouns: '',
           professionalism: '',
+          reviews: [],
         });
 
         // Push to /

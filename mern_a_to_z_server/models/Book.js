@@ -41,6 +41,10 @@ const BookSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
+  reviews: {
+    type: Array,
+    // required: true,
+  }
 });
 
 module.exports = Book = mongoose.model('book', BookSchema);

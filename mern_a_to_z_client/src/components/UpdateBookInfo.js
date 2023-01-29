@@ -15,6 +15,7 @@ function UpdateBookInfo(props) {
     helpfulness: '',
     pronouns: '',
     professionalism: '',
+    reviews:[]
   });
 
   const { id } = useParams();

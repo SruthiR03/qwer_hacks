@@ -83,9 +83,11 @@ export default function Graph(m1, m2, m3, m4, m5) {
     <div>
       <div>
         <br />
-        <div className="text-center">RATINGS</div>
+        <h3>
+          <strong> Ratings</strong>
+        </h3>
         <div>
-          <Bar data={data} options={options} style={{ width: "500px" }} />
+          <Bar data={data} options={options} style={{ width: "600px"}} />
         </div>
       </div>
     </div>
