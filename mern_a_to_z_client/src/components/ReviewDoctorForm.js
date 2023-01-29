@@ -35,6 +35,7 @@ export default function DoctorForm(book, setBook) {
       timeliness: book.book.timeliness,
       pronouns: book.book.pronouns,
       consideration: book.book.consideration,
+      specialty: book.book.specialty,
     };
 
     axios

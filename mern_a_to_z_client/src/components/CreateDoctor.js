@@ -12,12 +12,13 @@ const CreateDoctor = (props) => {
   // Define the state with useState hook
   const navigate = useNavigate();
   const [doctor, setDoctor] = useState({
-    name: "",
-    medical_expertise: "",
-    racial_inclusivity: "",
-    timeliness: "",
-    pronouns: "",
-    consideration: "",
+    name: '',
+    medical_expertise: '',
+    racial_inclusivity: '',
+    timeliness: '',
+    pronouns: '',
+    consideration: '',
+    specialty: '',
   });
 
   const onChange = (e) => {
@@ -27,20 +28,24 @@ const CreateDoctor = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
+    console.log(doctor);
+
     axios
-      .post("http://localhost:8082/api/doctors", doctor)
+      .post('http://localhost:8082/api/doctors', doctor)
       .then((res) => {
         setDoctor({
-          name: "",
-          medical_expertise: "",
-          racial_inclusivity: "",
-          timeliness: "",
-          pronouns: "",
-          consideration: "",
+          name: '',
+          medical_expertise: '',
+          racial_inclusivity: '',
+          timeliness: '',
+          pronouns: '',
+          consideration: '',
+          specialty: '',
         });
 
         // Push to /
-        navigate(`/show-doctor/${doctor._id}`);
+        //navigate(`/show-doctor/${doctor._id}`);
+        navigate('/doctor-list');
       })
       .catch((err) => {
         console.log("Error in CreateDoctor!");
@@ -91,7 +96,7 @@ const CreateDoctor = (props) => {
                     placeholder="Specialty of the Doctor"
                     name="specialty"
                     className="form-control"
-                    value={doctor.name}
+                    value={doctor.specialty}
                     onChange={onChange}
                   />
                 </div>
@@ -99,8 +104,8 @@ const CreateDoctor = (props) => {
               </div>
 
               <input
-                type="submit"
-                className="btn btn-outline-warning btn-block mt-4"
+                type='submit'
+                className='btn btn-outline-warning btn-block mt-4'
               />
             </form>
           </div>
