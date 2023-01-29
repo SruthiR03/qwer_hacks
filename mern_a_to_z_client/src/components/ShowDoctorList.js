@@ -3,6 +3,7 @@ import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import DoctorCard from './DoctorCard';
+import NavBar from "./NavBar";
 
 function ShowDoctorList() {
   const [doctors, setDoctors] = useState([]);
@@ -29,19 +30,31 @@ function ShowDoctorList() {
         <div className='row'>
           <div className='col-md-12'>
             <br />
-            <h2 className='display-4 text-center'>Doctors List</h2>
+    
+            
+            <div className="search-flex">
+          <div className="search-image"></div>
+
+          <input
+            type="text"
+            placeholder="search by speciality"
+            className={"searchSpeciality"}
+          />
+        </div>
           </div>
+          <NavBar />
 
           <div className='col-md-11'>
-            <Link
+          <Link
               to='/create-doctor'
               className='btn btn-outline-warning float-right'
             >
               + Add New Doctor
             </Link>
+        
             <br />
             <br />
-            <hr />
+         
           </div>
         </div>
 

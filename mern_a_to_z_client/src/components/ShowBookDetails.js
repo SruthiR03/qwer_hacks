@@ -94,12 +94,9 @@ function ShowBookDetails(props) {
         <div className="row">
           <div className="col-md-10 m-auto">
             <br /> <br />
-            <Link
-              to="/hospital-list"
-              className="btn btn-outline-warning float-left"
-            >
-              Show Hospital List
-            </Link>
+            <br /> <br />
+          
+            
           </div>
           <br />
           <NavBar />
@@ -121,7 +118,7 @@ function ShowBookDetails(props) {
           </div>
           <div>
             {/* <h1 className="display-6 text-center">Write A Review</h1> */}
-            <hr />
+          <br></br>
             <h1>
               {" "}
               <strong> Write A Review</strong>
@@ -133,12 +130,22 @@ function ShowBookDetails(props) {
         <button className={"submitButton"}>
           
           Submit</button> */}
-          </div>
-          <br></br>
 
-          <h1>
+<br></br>
+          <br></br>
+          <br></br>
+         
+              <h1>
             <strong>View Other Reviews</strong>
           </h1>
+          </div>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+       
+
+     
           <View book={book} setBook={setBook} />
         </div>
 

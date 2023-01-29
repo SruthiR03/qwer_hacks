@@ -3,8 +3,8 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import "../App.css";
 import axios from "axios";
 import NavBar from "./NavBar";
-import Radio from "./RadioButtons";
-import Graph from "./BarGraph";
+import DocRadio from "./DoctorRadio";
+import DocGraph from "./DoctorGraph";
 import DoctorForm from "./ReviewDoctorForm";
 import View from "./ViewReviews";
 
@@ -81,15 +81,14 @@ function ShowDoctorDetails(props) {
         <div className="row">
           <div className="col-md-10 m-auto">
             <br /> <br />
-            <Link
-              to="/doctor-list"
-              className="btn btn-outline-warning float-left"
-            >
-              Show Doctor List
-            </Link>
+           
           </div>
+            <NavBar />
           <br />
-          <NavBar />
+          <br /> <br />
+          <br />
+          
+        
           <div className="col-md-8 m-auto">
             <h1>
               {" "}
@@ -98,9 +97,9 @@ function ShowDoctorDetails(props) {
             <br />
             <div className="split-screen">
               <div>
-                <Radio />
+                <DocRadio />
               </div>
-              <Graph />
+              <DocGraph />
             </div>
           </div>
           {/* <div className="col-md-10 m-auto">{DoctorItem}</div> */}
@@ -125,7 +124,7 @@ function ShowDoctorDetails(props) {
           </div> */}
           <div>
             {/* <h1 className="display-6 text-center">Write A Review</h1> */}
-            <hr />
+           <br></br>
 
             <h1>
               {" "}
@@ -140,11 +139,15 @@ function ShowDoctorDetails(props) {
           Submit</button> */}
           </div>
           <br></br>
-          <h1>
+          
+          {/* <View book={doctor} setBook={setDoctor} /> */}
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <h1>
             <strong>View Other Reviews</strong>
           </h1>
-          <View book={doctor} setBook={setDoctor} />
-        </div>
 
         {/* <div className="col-md-10 m-auto">{BookItem}</div> */}
 
