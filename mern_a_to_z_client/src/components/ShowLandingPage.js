@@ -42,6 +42,8 @@ function ShowLandingPage() {
       <br />
       <br />
       {/* <h2 className="display-4 text-center">Landing Page</h2> */}
+      <div className="welcome"> Welcome To Rainbow Cross</div>
+      <br/>
       <div className="text-center">
         <img
           src={logo}
@@ -52,14 +54,16 @@ function ShowLandingPage() {
           }}
         />
       </div>
+      
       <div className="forms">
         <form noValidate onSubmit={onSubmit}>
           <div className="form-group">
             <input
+              className={"searchZipcode"}
               type="number"
               placeholder="Zipcode"
               id="zipcode"
-              className="form-control"
+              
               // value={book.name}
               //onChange={onChange}
             />
@@ -72,7 +76,7 @@ function ShowLandingPage() {
               type="text"
               placeholder="State"
               id="state"
-              className="form-control"
+              className={"searchState"}
               // value={book.name}
               //onChange={onChange}
             />
@@ -80,76 +84,147 @@ function ShowLandingPage() {
 
           <br />
           <div className="radius">
-            Within &nbsp; &nbsp;
+          <h2>Within</h2>&nbsp; &nbsp;
             <div className="form-group">
               <input
                 type="number"
                 placeholder="Distance (in miles)"
                 id="distance"
-                className="form-control"
+                className={"searchDistance"}
                 // value={book.name}
                 //onChange={onChange}
               />
             </div>
-            &nbsp; &nbsp; miles
+            &nbsp; &nbsp; <h2>Miles</h2>
           </div>
           <br />
 
+          
+
           <input
             type="submit"
-            className="btn btn-outline-warning btn-block mt-4"
+            
+            className={"submitbuttonrainbow"}
           />
         </form>
       </div>
       <br />
       <br />
       <br />
+      <br />
+      <br />
+      
       <div className="mission-page">
-        <h1>Our Mission</h1>
-        <br />
-        <br />
-        <br />
-        <div className="mission-statement">Hello</div>
+      <br />
+      <br />
+      <div className="mission">
+      <text><strong>Our Mission</strong></text>
+
       </div>
+        
+        <br />
+        <br></br>
+        <br></br>
+     
+     
+        <div className="mission-statement">
+          <br></br>
+          <br></br>
+          <h5><strong> Promoting Inclusive Care</strong> </h5>
+          <br></br>
+          <h4>
+          Help people in marginalized communities find inclusive, accepting, and affirming doctors to address their most pressing medical concerns.</h4>
+          <br></br>
+          <h5> <strong>Raise Healthcare Standards </strong></h5>
+          <br></br>
+          <h4> Deliver real data to hospital heads to reduce disparities, increase accessibility, and improve standard of care.</h4>
+          <br></br>
+          <h5> <strong>Rewrite Policy </strong></h5>
+          <br></br>
+          <h4>Provide passionate politicians with real human feedback to create more targeted/specific? and effective policies.</h4>
+          </div>
+      </div>
+      
       <div className="resources">
-        <h1>Resources</h1>
+      <br />
+      <br />
+    
+          <div className="welcome">
+            <text> Resources</text>
+
+          </div>
+       
+        <br />
         <div className="split-resources">
-          <br />
+        <br />
+        
           <br />
           <br />
           <div className="resource-box">
             <br />
-            <h1>LGBTQ+ Hotlines</h1>
+            <h1><strong>LGBTQ+ Hotlines</strong></h1>
             <br />
-            <h3>LGBT National Help Center</h3>
+            <a href="https://www.lgbthotline.org/">
+            <h4> <strong> LGBT National Help Center</strong></h4>
+            </a>
+            
+           
             <br />
-            <h3>LGBT National Youth Talkline</h3>
+            <a href="https://www.lgbthotline.org/youth-talkline">
+            <h4> <strong>LGBT National Youth Talkline </strong></h4>
+            </a>
+ 
             <br />
-            <h3>LGBT Domestic Abuse Hotline</h3>
+            <a href="https://www.thehotline.org/resources/abuse-in-lgbtq-communities/">
+            <h4> <strong>LGBT Domestic Abuse Hotline </strong></h4>
+              </a>
+            
             <br />
-            <h3>The Trevor Project: Reach A Counselor</h3>
+            <a href="https://www.thetrevorproject.org/">
+            <h4><strong>The Trevor Project: Reach A Counselor</strong></h4>
+              </a>
+           
+            <br />
           </div>
           <div className="resource-box">
             <br />
-            <h1>Referrals</h1>
+            <h1><strong>Referrals </strong></h1>
             <br />
-            <h3>AGLP - Association of Gay and Lesbian Psychiatrists</h3>
+            <a href=" https://aglp.memberclicks.net/aglp-referral">
+            <h4> <strong>AGLP - Association of Gay and Lesbian Psychiatrists</strong> </h4>
+            </a>
+           
+            
             <br />
-            <h3>GLMA - Health Professionals Advancing LGBTQ Equality</h3>
+            <a href="https://www.glma.org/index.cfm?fuseaction=Page.viewPage&pageId=939&grandparentID=534&parentID=938">
+            <h4><strong>GLMA - Health Professionals Advancing LGBTQ Equality </strong></h4>
+            </a>
+           
             <br />
-            <h3>Los Angeles LGBTQ Center</h3>
+            <a href="https://www.google.com/search?q=lgbtq+health+referrals+resources&rlz=1C5CHFA_enUS917US917&sxsrf=AJOqlzW564m8xeeTtIaGJcrBiUuqgkYpQA%3A1674992968098&ei=SF3WY7rhBdvfkPIPgLmTmAU&oq=lgbtq+health+refferals&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgCMgcIIRCgARAKMgcIIRCgARAKMgcIIRCgARAKOg0IABBHENYEEMkDELADOgoIABBHENYEELADOgQIIxAnOgYIABAWEB46BQgAEIYDOgUILhCABDoFCCEQoAFKBAhBGABKBAhGGABQyAVY6BxgrypoAXABeAGAAVyIAf0HkgECMTSYAQCgAQHIAQjAAQE&sclient=gws-wiz-serp">
+            <h4> <strong>Los Angeles LGBTQ Center</strong></h4>
+            </a>
+            
             <br />
-            <h3>Pride Counseling</h3>
+            <a href="https://www.pridecounseling.com/get-started/?utm_source=AdWords&utm_medium=Search_PPC_c&utm_term=pride+counseling_e&utm_content=48994507603&network=g&placement=&target=&matchtype=e&utm_campaign=946242232&ad_type=text&adposition=&kwd_id=kwd-387484007030&gclid=Cj0KCQiAz9ieBhCIARIsACB0oGIt_3mIER9JLuPLVR8vWJ7tTgnuS6h13aFglQkfPYcmkOeyXxpWerQaArvVEALw_wcB&not_found=1&gor=start_go&go=true">
+            <h4><strong> Pride Counseling</strong></h4>
+            </a>
+            
+            <br />
           </div>
         </div>
         <div className="other-resources">
-          <h3>Other Resources</h3>
+          <a href="https://www.cdc.gov/lgbthealth/index.htm">
+          <h2><strong>Other Resources</strong></h2>
+          </a>
+          
         </div>
       </div>
       <div>
         <br />
         <h2>Fill Out Our Feedback Form</h2>
         <div className="socials">
+          <br></br>
           <a href="/">
             <img
               src={FB}
