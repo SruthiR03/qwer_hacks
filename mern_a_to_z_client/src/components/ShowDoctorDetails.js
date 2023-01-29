@@ -97,9 +97,9 @@ function ShowDoctorDetails(props) {
             <br />
             <div className="split-screen">
               <div>
-                <DocRadio />
+                <DocRadio book={doctor} setBook={setDoctor}/>
               </div>
-              <DocGraph />
+              <DocGraph m1={doctor.medical_expertise} m2={doctor.racial_inclusivity} m3={doctor.timeliness} m4={doctor.pronouns}  m5={doctor.consideration}/>
             </div>
           </div>
           {/* <div className="col-md-10 m-auto">{DoctorItem}</div> */}
@@ -148,6 +148,7 @@ function ShowDoctorDetails(props) {
         <h1>
             <strong>View Other Reviews</strong>
           </h1>
+          {/* <View book={doctor} setBook={setDoctor} /> */}
 
         {/* <div className="col-md-10 m-auto">{BookItem}</div> */}
 

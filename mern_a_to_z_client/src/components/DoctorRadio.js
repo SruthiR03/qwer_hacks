@@ -8,11 +8,11 @@ export default function DocRadio(book, setBook) {
   const navigate = useNavigate();
   const onClick = (event) => {
     event.preventDefault();
-    var avg_rank_prof = book.book.professionalism;
+    var avg_rank_prof = book.book.medical_expertise;
     var avg_rank_race = book.book.racial_inclusivity;
-    var avg_rank_lgbtq = book.book.pronouns;
-    var avg_rank_clean = book.book.cleanliness;
-    var avg_rank_help = book.book.helpfulness;
+    var avg_rank_lgbtq = book.book.timeliness;
+    var avg_rank_clean = book.book.pronouns;
+    var avg_rank_help = book.book.considersation;
     var length_reviews = book.book.reviews.length;
 
     if (event.target.name == "professionalism") {
@@ -53,7 +53,7 @@ export default function DocRadio(book, setBook) {
     axios
       .put(`http://localhost:8082/api/books/${id}`, data)
       .then((res) => {
-        navigate(`/show-book/${id}`);
+        navigate(`/show-doctor/${id}`);
       })
       .catch((err) => {
         console.log("Error in UpdateBookInfo!");

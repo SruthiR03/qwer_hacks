@@ -172,7 +172,9 @@ export default function Radio(book, setBook) {
         </fieldset>
         <fieldset>
           <br />
+
           <h2>Allyship:</h2>
+
           <div className="radios">
             <label>
               &nbsp; 1 &nbsp;
