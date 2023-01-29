@@ -143,7 +143,7 @@ function ShowDoctorDetails(props) {
           <h1>
             <strong>View Other Reviews</strong>
           </h1>
-          {/* <View book={doctor} setBook={setDoctor} /> */}
+          <View book={doctor} setBook={setDoctor} />
         </div>
 
         {/* <div className="col-md-10 m-auto">{BookItem}</div> */}

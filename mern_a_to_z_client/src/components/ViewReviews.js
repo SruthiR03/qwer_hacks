@@ -4,7 +4,7 @@ import ReviewCard from "./ReviewCard";
 
 export default function View(book,setBook) {
 
-   //console.log(book.book.reviews);
+   console.log(book.book.reviews);
 
    const reviewList = 
    book.book.reviews.length === 0
