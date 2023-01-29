@@ -130,7 +130,11 @@ function ShowBookDetails(props) {
           Submit</button> */}
       </div>
       <br></br>
-      <View/>
+
+            <h1>
+               <strong>View Other Reviews</strong> 
+            </h1>
+      <View book={book} setBook={setBook}/>
           </div>
 
           {/* <div className="col-md-10 m-auto">{BookItem}</div> */}

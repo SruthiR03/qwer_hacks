@@ -23,9 +23,9 @@ const BookCard = (props) => {
         </Link>
       </div>
       <div className="reviewbutton">
-        <h2>
-          <Link to={`/show-book/${book._id}`}> View/Rate Hospital</Link>
-        </h2>
+       
+          <Link to={`/show-book/${book._id}`}>  <h2>View/Rate Hospital </h2></Link>
+        
       </div>
     </div>
   );
