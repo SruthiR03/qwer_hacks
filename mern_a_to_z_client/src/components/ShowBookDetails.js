@@ -87,9 +87,10 @@ function ShowBookDetails(props) {
           </div>
           <br />
           <div className="col-md-8 m-auto">
-            <h1 className="display-6 text-center">Rate {book.name}</h1>
+            <h1> <strong> Rate {book.name}</strong> </h1> 
+           
             {/* <p className="lead text-center">View Hospital's Info</p> */}
-            <hr />
+           
             {/* <br /> */}
             <div className="split-screen">
               <div>
@@ -99,9 +100,14 @@ function ShowBookDetails(props) {
             </div>
           </div>
           <div>
-            <h1 className="display-6 text-center">Write A Review</h1>
-            <hr />
+            <h1> <strong> Write A Review</strong></h1>
+            
             <Form />
+            <div className="submit-button">
+        <button className={"submitButton"}>
+          
+          Submit</button>
+      </div>
           </div>
 
           {/* <div className="col-md-10 m-auto">{BookItem}</div> */}

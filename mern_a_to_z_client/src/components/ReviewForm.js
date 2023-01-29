@@ -38,6 +38,7 @@ export default function Form() {
       <br />
       <br />
       <textarea
+      className="input-box-big"
         rows="8"
         cols="40"
         placeholder="Write your review here"
@@ -45,9 +46,7 @@ export default function Form() {
       />
       <br />
       <br />
-      <div className="submit-button">
-        <button>Submit button</button>
-      </div>
+      
     </div>
   );
 }
