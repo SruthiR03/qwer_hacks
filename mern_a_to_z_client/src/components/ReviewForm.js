@@ -45,7 +45,9 @@ export default function Form() {
       />
       <br />
       <br />
-      <div className="submit-button">Submit button</div>
+      <div className="submit-button">
+        <button>Submit button</button>
+      </div>
     </div>
   );
 }
