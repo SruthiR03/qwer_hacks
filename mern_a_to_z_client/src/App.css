@@ -529,3 +529,10 @@ label{
   display: flex;
   justify-content: center;
 }
+
+/* Add a doctor */
+
+.forms2{
+  justify-content: center;
+  justify-items: center;
+}
