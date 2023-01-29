@@ -79,6 +79,14 @@
   background-size:cover;
 
 }
+
+h1
+{
+  text-align:center;
+  color:#6FA0FF;
+  font-size:x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .logo
 {
   top: 20px;
@@ -179,6 +187,7 @@
       
 
     }
+
     .doctorbutton h2
   {
     font-family:'Verdana';
