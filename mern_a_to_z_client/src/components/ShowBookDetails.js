@@ -6,7 +6,19 @@ import Graph from "./BarGraph";
 import Radio from "./RadioButtons";
 import Form from "./ReviewForm";
 function ShowBookDetails(props) {
-  const [book, setBook] = useState({});
+  const [book, setBook] = useState({
+    name: '',
+    address: '',
+    city: '',
+    state: '',
+    zipcode: '',
+    cleanliness: '',
+    racial_inclusivity: '',
+    helpfulness: '',
+    pronouns: '',
+    professionalism: '',
+    reviews:[],
+  });
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -101,7 +113,7 @@ function ShowBookDetails(props) {
           <div>
             <h1 className="display-6 text-center">Write A Review</h1>
             <hr />
-            <Form />
+            <Form book={book} setBook={setBook} />
           </div>
 
           {/* <div className="col-md-10 m-auto">{BookItem}</div> */}

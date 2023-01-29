@@ -1,7 +1,9 @@
 import React from "react";
 import "../App.css";
 
-export default function Radio() {
+export default function Radio(book, setBook) {
+
+
   return (
     <div className="rating-inputs">
       <form>
