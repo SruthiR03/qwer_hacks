@@ -5,7 +5,7 @@ import styles from '../App.css';
 
 
 const BookCard = (props) => {
-  const book = props.book;
+   const book = props.book;
 
   return (
     <div className='card-container'>
@@ -26,9 +26,11 @@ const BookCard = (props) => {
        
       </div>
       <div className='doctorbutton'>
+        <Link to={`/doctor-list`}>
         <h2>
           View Doctors
         </h2>
+        </Link>
       
       </div>
       <div className='reviewbutton'>
