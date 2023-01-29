@@ -21,7 +21,7 @@ export default function DoctorForm(book, setBook) {
 
     newReviewArr.push(fullreview);
 
-    console.log(newReviewArr);
+    //console.log(newReviewArr);
     book.setBook({
       reviews: newReviewArr,
     });

@@ -45,12 +45,12 @@ function ShowDoctorList() {
           <NavBar />
 
           <div className='col-md-11'>
-          <Link
+          {/* <Link
               to='/create-doctor'
               className='btn btn-outline-warning float-right'
             >
               + Add New Doctor
-            </Link>
+            </Link> */}
         
             <br />
             <br />
