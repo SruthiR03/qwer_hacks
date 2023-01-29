@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
-import '../App.css';
-import axios from 'axios';
-
+import React, { useState, useEffect } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import "../App.css";
+import axios from "axios";
+import Graph from "./BarGraph";
+import Radio from "./RadioButtons";
+import Form from "./ReviewForm";
 function ShowBookDetails(props) {
   const [book, setBook] = useState({});
 
@@ -16,7 +18,7 @@ function ShowBookDetails(props) {
         setBook(res.data);
       })
       .catch((err) => {
-        console.log('Error from ShowBookDetails');
+        console.log("Error from ShowBookDetails");
       });
   }, [id]);
 
@@ -24,44 +26,44 @@ function ShowBookDetails(props) {
     axios
       .delete(`http://localhost:8082/api/books/${id}`)
       .then((res) => {
-        navigate('/');
+        navigate("/");
       })
       .catch((err) => {
-        console.log('Error form ShowBookDetails_deleteClick');
+        console.log("Error form ShowBookDetails_deleteClick");
       });
   };
 
   const BookItem = (
     <div>
-      <table className='table table-hover table-dark'>
+      <table className="table table-hover table-dark">
         <tbody>
           <tr>
-            <th scope='row'>1</th>
+            <th scope="row">1</th>
             <td>Name</td>
             <td>{book.name}</td>
           </tr>
           <tr>
-            <th scope='row'>2</th>
+            <th scope="row">2</th>
             <td>Address</td>
             <td>{book.address}</td>
           </tr>
           <tr>
-            <th scope='row'>3</th>
+            <th scope="row">3</th>
             <td>City</td>
             <td>{book.city}</td>
           </tr>
           <tr>
-            <th scope='row'>4</th>
+            <th scope="row">4</th>
             <td>State</td>
             <td>{book.state}</td>
           </tr>
           <tr>
-            <th scope='row'>5</th>
+            <th scope="row">5</th>
             <td>Zipcode</td>
             <td>{book.zipcode}</td>
           </tr>
           <tr>
-            <th scope='row'>6</th>
+            <th scope="row">6</th>
             <td>Cleanliness</td>
             <td>{book.cleanliness}</td>
           </tr>
@@ -71,41 +73,40 @@ function ShowBookDetails(props) {
   );
 
   return (
-    <div className='ShowBookDetails'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-md-10 m-auto'>
+    <div className="ShowBookDetails">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-10 m-auto">
             <br /> <br />
-            <Link to='/hospital-list' className='btn btn-outline-warning float-left'>
+            <Link
+              to="/hospital-list"
+              className="btn btn-outline-warning float-left"
+            >
               Show Hospital List
             </Link>
           </div>
           <br />
-          <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Hospital's Record</h1>
-            <p className='lead text-center'>View Hospital's Info</p>
-            <hr /> <br />
+          <div className="col-md-8 m-auto">
+            <h1 className="display-6 text-center">Rate {book.name}</h1>
+            {/* <p className="lead text-center">View Hospital's Info</p> */}
+            <hr />
+            {/* <br /> */}
+            <div className="split-screen">
+              <div>
+                <Radio />
+              </div>
+              <Graph />
+            </div>
           </div>
-          <div className='col-md-10 m-auto'>{BookItem}</div>
-          <div className='col-md-6 m-auto'>
-            <button
-              type='button'
-              className='btn btn-outline-danger btn-lg btn-block'
-              onClick={() => {
-                onDeleteClick(book._id);
-              }}
-            >
-              Delete Hospital
-            </button>
+          <div>
+            <h1 className="display-6 text-center">Write A Review</h1>
+            <hr />
+            <Form />
           </div>
-          <div className='col-md-6 m-auto'>
-            <Link
-              to={`/edit-book/${book._id}`}
-              className='btn btn-outline-info btn-lg btn-block'
-            >
-              Edit Hospital
-            </Link>
-          </div>
+
+          {/* <div className="col-md-10 m-auto">{BookItem}</div> */}
+
+          <br />
         </div>
       </div>
     </div>
