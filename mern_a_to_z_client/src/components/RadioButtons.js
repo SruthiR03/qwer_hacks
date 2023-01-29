@@ -5,11 +5,21 @@ export default function Radio() {
   return (
     <div className="rating-inputs">
       <form>
-        Rate the following out of five:
+        <h3>
+        <strong>Rate the following out of five: </strong>
+
+        </h3>
+        
+
+       
+        
         <fieldset>
           <br />
+          <h2>
+            Professionalism:
+          </h2>
           <label>
-            Professionalism: &nbsp; 1 &nbsp;
+            &nbsp; 1 &nbsp;
             <input
               type="radio"
               name="professionalism"
@@ -62,8 +72,11 @@ export default function Radio() {
         </fieldset>
         <fieldset>
           <br />
+          <h2>
+            Racial Inclusiveness:
+          </h2>
           <label>
-            Racial Inclusivity: &nbsp; 1 &nbsp;
+            &nbsp; 1 &nbsp;
             <input
               type="radio"
               name="race"
@@ -116,8 +129,11 @@ export default function Radio() {
         </fieldset>
         <fieldset>
           <br />
+          <h2>
+            LGBTQ+ Friendliness
+          </h2>
           <label>
-            LGBTQ+ Friendliness: &nbsp; 1 &nbsp;
+             &nbsp; 1 &nbsp;
             <input
               type="radio"
               name="lgbtq"
@@ -170,8 +186,11 @@ export default function Radio() {
         </fieldset>
         <fieldset>
           <br />
+          <h2>
+            Cleanliness:
+          </h2>
           <label>
-            Cleanliness: &nbsp; 1 &nbsp;
+             &nbsp; 1 &nbsp;
             <input
               type="radio"
               name="clean"
@@ -224,8 +243,12 @@ export default function Radio() {
         </fieldset>
         <fieldset>
           <br />
+          <h2>
+            Attentiveness:
+          </h2>
           <label>
-            Attentiveness: &nbsp; 1 &nbsp;
+          1 &nbsp;
+        
             <input
               type="radio"
               name="help"
