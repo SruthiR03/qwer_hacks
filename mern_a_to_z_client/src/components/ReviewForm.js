@@ -104,6 +104,8 @@ export default function Form(book, setBook) {
       />
       <br />
       <br />
+      <br />
+      <br />
       <div className="submit-button">
         <button onClick={onSubmit} className={"submitButton"}>
           Submit

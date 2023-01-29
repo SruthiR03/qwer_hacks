@@ -81,15 +81,11 @@ function ShowDoctorDetails(props) {
         <div className="row">
           <div className="col-md-10 m-auto">
             <br /> <br />
-            <Link
-              to="/doctor-list"
-              className="btn btn-outline-warning float-left"
-            >
-              Show Doctor List
-            </Link>
+           
           </div>
+            <NavBar />
           <br />
-          <NavBar />
+        
           <div className="col-md-8 m-auto">
             <h1>
               {" "}

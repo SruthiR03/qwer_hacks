@@ -167,12 +167,13 @@ h1
   
   overflow: hidden;
   background-color: white;
-  height:300px;
+  height:250px;
   border-image:url(SquareBg.png) 50 ;
   border-image-repeat: no-repeat;
   border-spacing: 0;
   border-radius: 50px;
   background-position: center center;
+  align-content: center;
   
   
   
@@ -204,6 +205,7 @@ h1
     {
       left:10px;
       width: 200px;
+      margin-top:-20px;
     
       padding-right: 20%;
       height:50px;
@@ -215,7 +217,7 @@ h1
       border-image-repeat: stretch;
       border-spacing: 0;
      
-      margin-top:20px;
+     
       margin-left: 45px;
       
       
@@ -340,6 +342,7 @@ label{
   justify-items: center;
   align-self: auto;
   margin-left:24px;
+  margin-bottom:40px;
 
 }
 
@@ -377,7 +380,7 @@ label{
   height:40px;
   margin-top:20px;
   margin-bottom:30px;
-  margin-left:500px;
+  margin-left:0px;
   background-color: white;
   border: 5px solid #CDF2FC;
   color:#808080
@@ -697,7 +700,7 @@ h5
 
 .doctor-card{
   width: 300px;
-  border: 5px solid rgba(0, 0, 0.125);
+  border: 3px solid rgba(0, 0, 0.125);
   
   
   overflow: hidden;
@@ -709,4 +712,15 @@ h5
   border-radius: 50px;
   background-position: center center;
 }
+
+.doctor-card h2
+    {
+      font-family:'Verdana';
+      text-align:center;
+      font-weight: bold;
+      color: #808080;
+      font-size: small;
+      width:175px;
+      
+    }
 

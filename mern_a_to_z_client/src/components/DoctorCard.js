@@ -12,7 +12,7 @@ const DoctorCard = (props) => {
           <strong>{doctor.name}</strong>
         </h1>
         <h3>
-          <strong>INSERT MY SPECIALTY</strong>
+          <strong>insert speciality</strong>
         </h3>
         {/* <h2>
           <Link to={`/show-doctor/${doctor._id}`}>{doctor.name}</Link>
