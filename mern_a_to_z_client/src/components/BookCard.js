@@ -5,18 +5,18 @@ import styles from '../App.css';
 
 
 const BookCard = (props) => {
-  const book = props.book;
+   const book = props.book;
 
   return (
     <div className='card-container'>
      
       <div className='desc'>
        
-        <h2>
+        <h1>
           <strong>
-          <Link to={`/show-book/${book._id}`}> {  book.name}</Link>
+          {  book.name}
           </strong>
-        </h2>
+        </h1>
     
        <h3>
          <strong>
@@ -26,9 +26,11 @@ const BookCard = (props) => {
        
       </div>
       <div className='doctorbutton'>
+        <Link to={`/doctor-list`}>
         <h2>
           View Doctors
         </h2>
+        </Link>
       
       </div>
       <div className='reviewbutton'>
