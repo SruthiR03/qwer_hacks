@@ -18,8 +18,23 @@ const BookCard = (props) => {
           </strong>
         </h2>
     
-        <h3>{book.address}</h3>
-        <p>{book.zipcode}</p>
+       <h3>
+         <strong>
+           {book.address}
+         </strong>
+         </h3>
+       
+      </div>
+      <div className='doctorbutton'>
+        <h2>
+          View Doctors
+        </h2>
+      
+      </div>
+      <div className='reviewbutton'>
+        <h2>
+          View/Rate Hospital
+        </h2>
       </div>
     </div>
   );
